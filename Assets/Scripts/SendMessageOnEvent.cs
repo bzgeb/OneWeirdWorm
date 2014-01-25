@@ -7,7 +7,11 @@ public enum Events {
     JigUp,
     Straighten,
     RotateForward,
-    RotateBackward
+    RotateBackward,
+    Pose,
+    JigForward,
+    JigBackward,
+    JigDown
 };
 
 public class SendMessageOnEvent : MonoBehaviour 
