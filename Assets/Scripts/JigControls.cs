@@ -72,17 +72,21 @@ public class JigControls : MonoBehaviour
 
     void JigUp() {
         rigidbody.AddForce( 0, 15f, 0, ForceMode.Impulse );
+        jigUp = false;
     }
 
     void JigDown() {
         rigidbody.AddForce( 0, -15f, 0, ForceMode.Impulse );
+        jigDown = false;
     }
 
     void JigBackward() {
         rigidbody.AddForce( 0, 0, 15f, ForceMode.Impulse );
+        jigBackward = false;
     }
 
     void JigForward() {
         rigidbody.AddForce( 0, 0, -15f, ForceMode.Impulse );
+        jigForward = false;
     }
 }
