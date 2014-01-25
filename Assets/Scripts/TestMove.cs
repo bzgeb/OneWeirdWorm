@@ -29,13 +29,11 @@ public class TestMove : MonoBehaviour
     }
 
     void JigRight() {
-        Debug.Log("Right");
         rigidbody.AddForce( 15f, 0, 0, ForceMode.Impulse );
         jigRight = false;
     }
 
     void JigLeft() {
-        Debug.Log("Left");
         rigidbody.AddForce( -15f, 0, 0, ForceMode.Impulse );
         jigLeft = false;
     }
