@@ -41,3 +41,5 @@ Thumbs.db
 # Additional ignores
 iOS/*
 
+OneWeirdWorm/*
+Assets/Music/*
