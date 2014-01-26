@@ -4,7 +4,7 @@ using System.Collections;
 public class Track : MonoBehaviour 
 {
     void Awake() {
-        Invoke( "StartTrack", 5.0f );
+        Invoke( "StartTrack", 1.0f );
     }
 
     void StartTrack() {
