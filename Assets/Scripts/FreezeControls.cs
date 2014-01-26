@@ -8,7 +8,7 @@ public class FreezeControls : MonoBehaviour
     public Button[] freezeButtons;
 
     void Update() {
-        freeze = Input.GetKey( KeyCode.P );
+        freeze = Input.GetKey( KeyCode.S );
         foreach ( Button button in freezeButtons ) {
             if ( button.buttonIsDown ) {
                 freeze = true;

@@ -12,8 +12,11 @@ public enum Events {
     JigForward,
     JigBackward,
     JigDown,
-    StartArrowParticles,
-    StopArrowParticles
+    StartGroundParticles,
+    StopGroundParticles,
+    StartBackgroundParticles,
+    StopBackgroundParticles,
+    OnTick
 };
 
 public class SendMessageOnEvent : MonoBehaviour 
