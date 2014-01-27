@@ -8,6 +8,10 @@ public class Track : MonoBehaviour
     }
 
     void StartTrack() {
+        EventManager.Push( Events.BeginRecording.ToString() );
+        Invoke( "SignalEndOfSong", audio.clip.length );
+        // Invoke( "SignalEndOfSong", 20f );
+
         audio.Play();
         Invoke( "StartGroundParticles", 31f );
         Invoke( "StartBackgroundParticles", 154.5f );
@@ -19,5 +23,9 @@ public class Track : MonoBehaviour
 
     void StartBackgroundParticles() {
         EventManager.Push( Events.StartBackgroundParticles.ToString() );
+    }
+
+    void SignalEndOfSong() {
+        EventManager.Push( Events.EndRecording.ToString() );
     }
 }

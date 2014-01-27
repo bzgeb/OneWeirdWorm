@@ -16,7 +16,9 @@ public enum Events {
     StopGroundParticles,
     StartBackgroundParticles,
     StopBackgroundParticles,
-    OnTick
+    OnTick,
+    BeginRecording,
+    EndRecording
 };
 
 public class SendMessageOnEvent : MonoBehaviour 
