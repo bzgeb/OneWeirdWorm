@@ -10,7 +10,6 @@ public class Track : MonoBehaviour
     void StartTrack() {
         EventManager.Push( Events.BeginRecording.ToString() );
         Invoke( "SignalEndOfSong", audio.clip.length );
-        // Invoke( "SignalEndOfSong", 20f );
 
         audio.Play();
         Invoke( "StartGroundParticles", 31f );
