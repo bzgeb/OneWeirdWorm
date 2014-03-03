@@ -8,6 +8,12 @@ public class Button : MonoBehaviour
     public bool holdButton;
     public bool buttonIsDown;
 
+    void OnEnable() {
+        if ( Application.platform != RuntimePlatform.IPhonePlayer ) {
+            gameObject.SetActive( false );
+        }
+    }
+
     void Update() {
         buttonIsDown = false;
         if ( GetMouseDown() ) {

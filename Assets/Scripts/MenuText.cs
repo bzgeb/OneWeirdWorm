@@ -10,7 +10,8 @@ public class MenuText : MonoBehaviour
     float saturation;
 
     void Start() {
-        StartCoroutine( UpdateFontSize() );
+        // StartCoroutine( UpdateFontSize() );
+        InvokeRepeating( "ChangeFontSize", 0.000001f, 0.27272727272727f );
     }
 
     void Update() {
@@ -30,7 +31,7 @@ public class MenuText : MonoBehaviour
     }
 
     void ChangeFontSize() {
-        text.fontSize = Random.Range( 23, 45 );
+        text.fontSize = Random.Range( 25, 45 );
     }
 
     IEnumerator UpdateFontSize() {
@@ -41,7 +42,7 @@ public class MenuText : MonoBehaviour
             if ( elapsed > changeTime ) {
                 elapsed = 0;
                 changeTime = Random.Range( 0.12f, 0.30f );
-                ChangeFontSize();
+                // ChangeFontSize();
             }
 
             elapsed += Time.deltaTime;
