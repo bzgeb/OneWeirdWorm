@@ -18,7 +18,9 @@ public enum Events {
     StopBackgroundParticles,
     OnTick,
     BeginRecording,
-    EndRecording
+    EndRecording,
+    EndOfSong,
+    StartOfSong
 };
 
 public class SendMessageOnEvent : MonoBehaviour 

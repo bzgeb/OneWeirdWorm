@@ -29,8 +29,9 @@ public class Track : MonoBehaviour
     }
 
     void SignalEndOfSong() {
+        EventManager.Push( Events.EndOfSong.ToString() );
         EventManager.Push( Events.EndRecording.ToString() );
-        Invoke( "LoadMenu", 3.0f );
+        Invoke( "LoadMenu", 9.0f );
     }
 
     void LoadMenu() {

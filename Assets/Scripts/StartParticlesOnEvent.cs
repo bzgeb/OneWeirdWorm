@@ -5,6 +5,7 @@ public class StartParticlesOnEvent : MonoBehaviour
 {
     public Events startEvent;
     public Events stopEvent;
+    public bool playAudio;
 
     void OnEnable() {
         EventManager.Register( startEvent.ToString(), StartEvent );
@@ -18,6 +19,9 @@ public class StartParticlesOnEvent : MonoBehaviour
 
     void StartEvent( params object[] args ) {
         particleSystem.Play();
+        if ( playAudio ) {
+            audio.Play();
+        }
     }
 
     void StopEvent( params object[] args ) {
